@@ -1,6 +1,6 @@
 function timer(){
 	// Set the date we're counting down to
-var countDownDate = new Date("Feb 9, 2023 00:00:00").getTime();
+var countDownDate = new Date("Feb 09, 2023 00:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -18,14 +18,18 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   // Output the result in an element with id="demo"
-  document.getElementById("timer").innerHTML = days + "DAYS  " + hours + "HRS  "
-  + minutes + "MIN  " + seconds + "SEC";
+  document.getElementById("days").innerHTML = days;
+  document.getElementById("hours").innerHTML = hours;
+  document.getElementById("minutes").innerHTML = minutes;
+  document.getElementById("seconds").innerHTML = seconds;
     
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("timer").innerHTML = "00" + "D " + "00" + "H "
-  + "00" + "M " + "00" + "S ";
+     document.getElementById("days").innerHTML = "00";
+     document.getElementById("hours").innerHTML = "00";
+     document.getElementById("minutes").innerHTML = "00";
+     document.getElementById("seconds").innerHTML = "00";
   }
 }, 1000);
 }
